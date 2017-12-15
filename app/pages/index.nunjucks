@@ -1,0 +1,12 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+    <div class="citat">A PHOTOGRAPHER'S PORTFOLIO</div>
+        <div class="slideContent">
+            <img src="images/sky.jpg"/>
+            <img src="images/sunset.jpg"/>
+            <img src="images/sky2.jpg"/>
+        </div>
+{% include "partials/navigation.nunjucks" %}
+{% include "partials/footer.nunjucks" %}
+{% endblock %}

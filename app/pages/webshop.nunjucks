@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ja9 Webbshop</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        
+        <!-- Bootstrap -->
+         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/webshop.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+       
+    </head>
+    <body>
+        
+        <div class="cart-icon"><div id="itemsInCart">0</div></div>
+     <div class="webHeader"><h1>Ja9 Webshop</h1></div>
+      <a class="goToStart" href="index.html">[Gå till start]</a>
+        <div class="webshop">
+        <div class="productWrapper">
+            <div class="itemWrapper">
+                <h3>Mist</h3>
+            <img class="itemImg" src="images/mist.jpg"/>
+                <p class="text">205 x 60 cm</p>
+                <p class="text">I lager</p>
+                <p class="price">195;-</p>
+            <a class="addToCart" href="#" data-name="Mist" data-price="195" data-image="images/mist.jpg"><button class="addToBasket">Lägg i varukorgen</button></a>
+            </div>
+            <div class="itemWrapper">
+                <h3>Bridge</h3>
+            <img class="itemImg" src="images/bridge.jpg"/>
+                <p class="text">205 x 60 cm</p>
+                <p class="text">I lager</p>
+                <p class="price">99;-</p>
+                 <a class="addToCart" href="#" data-name="Bridge" data-price="99" data-image="images/bridge.jpg"><button class="addToBasket">Lägg i varukorgen</button></a>
+            </div>
+            <div class="itemWrapper">
+                <h3>Sky</h3>
+            <img class="itemImg" src="images/sky.jpg"/>
+                <p class="text">205 x 60 cm</p>
+                <p class="text">Slutsåld</p>
+                <p class="price">199;-</p>
+                 <a class="addToCart" href="#" data-name="Sky" data-price="199" data-image="images/sky.jpg"><button class="addToBasket">Lägg i varukorgen</button></a>
+            </div>
+        </div>
+         <div class="productWrapper">
+            <div class="itemWrapper">
+                <h3>Boat</h3>
+            <img class="itemImg" src="images/boat.jpg"/>
+                <p class="text">205 x 60 cm</p>
+                <p class="text">I lager</p>
+                <p class="price">195;-</p>
+            <a class="addToCart" href="#" data-name="Boat" data-price="195" data-image="images/boat.jpg"><button class="addToBasket">Lägg i varukorgen</button></a>
+            </div>
+            <div class="itemWrapper">
+                <h3>Woods</h3>
+            <img class="itemImg" src="images/woods.jpg"/>
+                <p class="text">205 x 60 cm</p>
+                <p class="text">I lager</p>
+                <p class="price">99;-</p>
+                 <a class="addToCart" href="#" data-name="Woods" data-price="99" data-image="images/woods.jpg"><button class="addToBasket">Lägg i varukorgen</button></a>
+            </div>
+            <div class="itemWrapper">
+                <h3>Frost</h3>
+            <img class="itemImg" src="images/frost.jpg"/>
+                <p class="text">205 x 60 cm</p>
+                <p class="text">Slutsåld</p>
+                <p class="price">199;-</p>
+                 <a class="addToCart" href="#" data-name="Frost" data-price="199" data-image="images/frost.jpg"><button class="addToBasket">Lägg i varukorgen</button></a>
+            </div>
+        </div>
+         <div class="productWrapper">
+            <div class="itemWrapper">
+                <h3>Rail</h3>
+            <img class="itemImg" src="images/rail.jpg"/>
+                <p class="text">205 x 60 cm</p>
+                <p class="text">I lager</p>
+                <p class="price">195;-</p>
+            <a class="addToCart" href="#" data-name="Rail" data-price="195" data-image="images/rail.jpg"><button class="addToBasket">Lägg i varukorgen</button></a>
+            </div>
+            <div class="itemWrapper">
+                <h3>Nods</h3>
+            <img class="itemImg" src="images/nods.jpg"/>
+                <p class="text">205 x 60 cm</p>
+                <p class="text">I lager</p>
+                <p class="price">99;-</p>
+                 <a class="addToCart" href="#" data-name="Nods" data-price="99" data-image="images/nods.jpg"><button class="addToBasket">Lägg i varukorgen</button></a>
+            </div>
+            <div class="itemWrapper">
+                <h3>Sunset</h3>
+            <img class="itemImg" src="images/sunset.jpg"/>
+                <p class="text">205 x 60 cm</p>
+                <p class="text">Slutsåld</p>
+                <p class="price">199;-</p>
+                 <a class="addToCart" href="#" data-name="Sunset" data-price="199" data-image="images/sunset.jpg"><button class="addToBasket">Lägg i varukorgen</button></a>
+            </div>
+        </div>
+        </div>
+        <div class="cart">
+            <h3>Varukorg</h3>
+            <ul id="showCart"></ul>
+            
+            <p class="text">Totalt: <span id="totalCart"></span> SEK</p>
+            <a href="cart.html"><button class="checkout">Till Kassan</button></a>
+        </div>
+    
+       
+     <footer>COPYRIGHTS © JANIE MOBACKER 2017</footer>
+        <script>
+            
+            
+            $(".cart-icon").click(function(event){
+                if($(".cart").css("display") == "none"){
+                        $(".cart").css("display", "block");
+                        $('.cart-icon').css("background", "url(images/exitShoppingCart.png)"); 
+                    }else if ($(".cart").css("display") == "block"){
+                        $(".cart").css("display", "none");
+                        $('.cart-icon').css("background", "url(images/shoppingCart.png)"); 
+                    }
+            })
+            
+            
+            $(".addToCart").click(function(event){
+                event.preventDefault(); // för att lämken inte ska göra det den brukar göra (i detta fall gå till #, toppen på sidan. )
+                var name = $(this).attr("data-name"); 
+                var price = Number($(this).attr("data-price"));
+                var itemImage = $(this).attr("data-image");
+                
+                shoppingCart.addItemToCart(name, price, 1, itemImage);
+                shoppingCart.saveCart();
+                displayCart();
+            }); 
+            
+            $("#clearCart").click(function(event){
+                shoppingCart.clearCart();
+                displayCart();
+            });
+            
+
+            function displayCart(){
+                var cartArray = shoppingCart.listCart();
+                var output = "";
+                
+                for (var i in cartArray){
+                    output += "<li>"
+                        +"<img class='cartImg' src='"+cartArray[i].itemImage+"'/><br /><p class='changeCount'><button class='minusItem' data-name='"
+                        +cartArray[i].name+"'>-</button> "
+                        +cartArray[i].count+"<button class='plusItem' data-name='"
+                        +cartArray[i].name+"'>+</button></p> <strong> "
+                        +cartArray[i].name
+                        +"</strong>"
+                        +"<br/> <button class='deleteItem' data-name='"
+                        +cartArray[i].name+"'>Ta Bort</button>"
+                        +"<span>"+cartArray[i].total
+                        +" SEK</span>"
+                        +"</li>"
+                        +"<hr>";
+                }
+                $("#showCart").html(output);
+                $("#itemsInCart").html(shoppingCart.countCart()); $("#totalCart").html(shoppingCart.totalCost());
+                shoppingCart.saveCart();
+            }
+            
+                $("#showCart").on("click", ".deleteItem", (function(event){
+                    var name = $(this).attr("data-name");
+                    shoppingCart.removeItemFromCart(name);
+                    displayCart();
+            }));
+            
+            $("#showCart").on("click", ".minusItem", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.removeOneItemFromCart(name);
+                displayCart();
+                
+            });
+            
+            $("#showCart").on("click", ".plusItem", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.addItemToCart(name, 0, 1);
+                displayCart();
+            })
+            
+            $("#showCart").on("change", ".itemCount", function(){
+                var name = $(this).attr("data-name");
+                var count = $(this).val() // get value from inputfield.
+                shoppingCart.setCountForItem(name, count);
+            })
+            
+       displayCart();
+            
+            // name price count
+            /*[
+               {name: "Apple",
+                price: 90,
+                count: 3},
+               {name: "Hej",
+                price: 24,
+                count: 6},
+               {name price count];*/
+            
+        //totalcost: (count*cost)
+        </script>
+    </body>
+</html>

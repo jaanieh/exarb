@@ -1,0 +1,23 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+    <div class="rubrik">info.</div>
+        <div class="slideContent1">
+            <img src="images/sky.jpg"/>
+            <img src="images/sunset.jpg"/>
+            <img src="images/sky2.jpg"/>
+        </div>
+        <div class="infoContainer">
+            <div class="infotext">
+            <p>Tjänster/Produkter:</p> <strong>Photo Shoot</strong> - Jag sysslar med photoshoots / fotograferingar på beställning. Vid intresse, skricka iväg ett meddelande via kontaktformuläret och beskriv vad du/ni är intresserade av, så kommer vi att kolla på det ihop och komma fram till ett pris. <br/><br/>
+            <strong>Canvas</strong> - Fotografierna i galleriet är även till salu, kontakta vid intresse. 
+            </div>
+            <div class="space"></div>
+            <div class="infotext">
+            <p>Fotograf</p>
+            Janie heter jag, tjugofem år gammal och bosatt i Göteborg.  Jag har studerat Media - Fotografi på Riddarfjärdens Gymnasium mellan 2008-2011 och har efter detta arbetat som hobbyfotograf under en tid, samt att jag fotograferar mycket för min egen skull på fritiden. Utöver fotograferandet så är jag även utbildad frontend-utvecklare. 
+           </div>
+        </div>
+{% include "partials/navigation.nunjucks" %}
+{% include "partials/footer.nunjucks" %}
+{% endblock %}

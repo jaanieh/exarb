@@ -1,0 +1,41 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+    <div class="rubrik">kontakt.</div>
+        <div class="slideContent1">
+            <img src="images/sky.jpg"/>
+            <img src="images/sunset.jpg"/>
+            <img src="images/sky2.jpg"/>
+        </div>
+        <div class="kontaktContainer">
+            <div class="infotext">
+                <p>Kontaktformulär</p>
+                <form id="form" name="form" method="post" action="javascript:void(0);"> 
+                <label for="name">Ditt namn:</label>
+                <input type="text" name="name" id="name" placeholder="...janie"/> <br />
+                <label for="email">Din mailadress:</label>
+                <input type="email" name="email" id="email" placeholder="du@mail.se"/> <br />
+                <label for="meddelande">Meddelande:</label>
+                <textarea name="meddelande" id="meddelande" placeholder="Vad vill du ha hjälp med?" cols="45" rows="3"></textarea>
+                <button id="send" onClick="sendForm()">Skicka</button>
+                <div id="messages"></div>
+                </form>
+            </div>
+            <div class="space"></div>
+            <div class="infotext">
+                <p>Socialt</p>
+                <div class="social">
+                <a href="#" target="_top"><img src="images/facebook.png"/></a>
+                <a href="#" target="_top"><img src="images/instagram.png"/></a>
+                <a href="#" target="_top"><img src="images/linkedin.png"/></a>
+                </div>
+                Janie Mobacker<br />
+                E-mail: janie.mobacker@live.se<br />
+                417 61 Göteborg<br />
+                Examensarbete 2017-2018<br />
+                EC-utbildning, Frontend-utveckling<br />
+                </div>
+        </div>
+{% include "partials/navigation.nunjucks" %}
+{% include "partials/footer.nunjucks" %}
+{% endblock %}

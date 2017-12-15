@@ -1,0 +1,20 @@
+<div class="menu">
+    <div class="menuItem">
+        <a href="info.html"><img src="images/btn3.png"/>
+            <div class="menuText">[ INFO ]</div></a>
+    </div>
+    <div class="menuItem">
+        <a href="galleri.html"><img src="images/btn1.png"/>
+            <div class="menuText">[ GALLERI ]</div></a>
+    </div>
+    <div class="menuItem">
+        <a href="kontakt.html"><img src="images/btn2.png"/>
+            <div class="menuText">[ KONTAKT ]</div></a>
+    </div>
+    <div class="menuItem">
+        <a href="webshop.html"><img src="images/btn4.png"/>
+            <div class="menuText">[ WEBSHOP ]</div></a>
+    </div>
+</div>
+
+<a href="index.html" class="start">[Gå till start]</a>

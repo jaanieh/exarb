@@ -1,0 +1,60 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+   <div class="rubrik">galleri.</div>
+        
+        <img src="images/arrowLeft.png" id="arrowLeft"/>
+        <div class="gallery">
+            
+        <div class="image">
+        <img src="images/woods.jpg" class="thumbnail" onclick="popup(this)" alt="Woods" width="250" height="150">
+        <div class="desc">Lensflare in the woods</div>
+        </div>
+        <div class="image">
+        <img src="images/boat.jpg" class="thumbnail" onclick="popup(this)" alt="Woods" width="250" height="150">
+        <div class="desc">At the end of the tram, Saltholmen</div>
+        </div>
+        <div class="image">
+        <img src="images/rail.jpg" class="thumbnail" onclick="popup(this)" alt="Woods" width="250" height="150">
+        <div class="desc">On my way to new adventures</div>
+        </div>
+        <div class="image">
+        <img src="images/sky.jpg" class="thumbnail" onClick="popup(this)" alt="Woods" width="250" height="150">
+        <div class="desc">Dramatic latesummersky in Lilla Edet</div>
+        </div>
+        <div class="image">
+        <img src="images/frost.jpg" class="thumbnail" onclick="popup(this)" alt="Woods" width="250" height="150">
+        <div class="desc">The first frost</div>
+        </div>
+        <div class="image">
+        <img src="images/nods.jpg" class="thumbnail" onclick="popup(this)" alt="Woods" width="250" height="150">
+        <div class="desc">Misty Citynight</div>
+        </div>
+        <div class="image">
+        <img src="images/mist.jpg" class="thumbnail" onclick="popup(this)" alt="Woods" width="250" height="150">
+        <div class="desc">This road leads to nowhere</div>
+        </div>
+        <div class="image">
+        <img src="images/fall.jpg" class="thumbnail" onclick="popup(this)" alt="Woods" width="250" height="150">
+        <div class="desc">Fall in Mölnlycke</div>
+        </div>
+        <div class="image">
+        <img src="images/bridge.jpg" class="thumbnail" onclick="popup(this)" alt="Woods" width="250" height="150">
+        <div class="desc">The bridge to Home</div>
+        </div>
+        <div class="image">
+        <img src="images/sunset.jpg" class="thumbnail" onclick="popup(this)" alt="Woods" width="250" height="150">
+        <div class="desc">Sunrise in Lödöse</div>
+        </div>
+        </div>
+        
+        <img src="images/arrowRight.png" id="arrowRight"/>
+        
+        
+        <!-- POPUP --> 
+        <div id="cover"></div>
+        <div id="modalPopup"><img src="images/close.jpg" class="closeCross" onClick="crossClick()" /><div id="bigImage"></div></div>
+            
+{% include "partials/navigation.nunjucks" %}
+{% include "partials/footer.nunjucks" %}
+{% endblock %}
