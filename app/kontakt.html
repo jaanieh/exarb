@@ -21,7 +21,20 @@
         <div class="kontaktContainer">
             <div class="infotext">
                 <p>Kontaktformulär</p>
-                <form id="form" name="form" method="post" action="javascript:void(0);"> 
+                <form id="form" name="form" action="https://formspree.io/janie.mobacker@live.se"
+                  method="POST">
+                <label for="name">Ditt namn:</label>
+                <input type="text" name="name" id="name">
+                <label for="_replyto">Din mailadress:</label>
+                <input type="email" name="_replyto">
+                <label for="meddelande">Meddelande:</label>
+                <textarea name="message" placeholder="Vad har du på hjärtat?" id="meddelande" cols="45" rows="2"></textarea>
+                <input type="submit" value="Skicka" id="send" onClick="sendForm()">
+                <input type="hidden" name="_next" value="#" />
+                <div id="messages"></div>
+                </form>
+                
+                <!--<form method="post" action="javascript:void(0);"> 
                 <label for="name">Ditt namn:</label>
                 <input type="text" name="name" id="name" placeholder="...janie"/> <br />
                 <label for="email">Din mailadress:</label>
@@ -30,7 +43,7 @@
                 <textarea name="meddelande" id="meddelande" placeholder="Vad vill du ha hjälp med?" cols="45" rows="3"></textarea>
                 <button id="send" onClick="sendForm()">Skicka</button>
                 <div id="messages"></div>
-                </form>
+                </form>-->
             </div>
             <div class="space"></div>
             <div class="infotext">

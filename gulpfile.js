@@ -89,13 +89,13 @@ gulp.task('build', function(callback){
 
 // github pages
 
-var gulp   = require('gulp');
-    var deploy = require('gulp-gh-pages');
+var gulp        = require('gulp');
+var deploy      = require('gulp-gh-pages');
 
-    gulp.task('deploy', function () {
-      return gulp.src("./dist/**/*")
-        .pipe(deploy({ 
-          remoteUrl: "https://github.com/jaanieh/exarb.git",
-          branch: "master"
-        }))
-    });
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
