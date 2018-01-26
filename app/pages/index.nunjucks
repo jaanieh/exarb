@@ -1,6 +1,7 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
+<div class="activePage"></div>
     <div class="citat">A PHOTOGRAPHER'S PORTFOLIO</div>
         <div class="slideContent">
             <img src="images/sky.jpg"/>

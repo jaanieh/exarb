@@ -1,7 +1,7 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-    <div class="rubrik">info.</div>
+<div class="activePage">info</div>
         <div class="slideContent1">
             <img src="images/sky.jpg"/>
             <img src="images/sunset.jpg"/>
@@ -15,7 +15,7 @@
             <div class="space"></div>
             <div class="infotext">
             <p>Fotograf</p>
-            Janie heter jag, tjugofem år gammal och bosatt i Göteborg.  Jag har studerat Media - Fotografi på Riddarfjärdens Gymnasium mellan 2008-2011 och har efter detta arbetat som hobbyfotograf under en tid, samt att jag fotograferar mycket för min egen skull på fritiden. Utöver fotograferandet så är jag även utbildad frontend-utvecklare. 
+            Janie heter jag, tjugofem år gammal och bosatt i Göteborg.  Jag har studerat Media - Fotografi på Riddarfjärdens Gymnasium mellan 2008-2011 och har efter detta arbetat som hobbyfotograf under en tid, samt att jag fotograferar mycket för min egen skull på fritiden. Utöver fotograferandet så är jag även frontendutvecklarstudent. 
            </div>
         </div>
 {% include "partials/navigation.nunjucks" %}

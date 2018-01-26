@@ -1,7 +1,7 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-    <div class="rubrik">kontakt.</div>
+<p class="activePage">kontakt</p>
         <div class="slideContent1">
             <img src="images/sky.jpg"/>
             <img src="images/sunset.jpg"/>

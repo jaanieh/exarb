@@ -1,11 +1,16 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-   <div class="rubrik">galleri.</div>
+<div class="activePage">galleri</div>
+    <div class="slideContent1">
+            <img src="images/sky.jpg"/>
+            <img src="images/sunset.jpg"/>
+            <img src="images/sky2.jpg"/>
+        </div>
         
+        <div class="galleryContainer">
         <img src="images/arrowLeft.png" id="arrowLeft"/>
         <div class="gallery">
-            
         <div class="image">
         <img src="images/woods.jpg" class="thumbnail" onclick="popup(this)" alt="Woods" width="250" height="150">
         <div class="desc">Lensflare in the woods</div>
@@ -47,9 +52,8 @@
         <div class="desc">Sunrise in Lödöse</div>
         </div>
         </div>
-        
         <img src="images/arrowRight.png" id="arrowRight"/>
-        
+        </div>
         
         <!-- POPUP --> 
         <div id="cover"></div>

@@ -1,21 +1,12 @@
 @import "https://fonts.googleapis.com/css?family=Raleway:100,200,300";
-/*@keyframes slideIn {
-  0% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}*/
+@import "https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day";
 @keyframes "scaling" {
   From {
     -webkit-transform: scale(1); }
   To {
     -webkit-transform: scale(2); } }
 
-/**
- * Call the damn thing
- */
+/* Call the damn thing */
 ::-webkit-scrollbar {
   width: 2px;
   height: 2px; }
@@ -37,17 +28,68 @@ html body {
   font-family: Raleway;
   margin: 0; }
 
+.header {
+  width: 100%;
+  z-index: 1;
+  height: 100px; }
+  .header hr {
+    border: none;
+    height: 1px;
+    margin-top: 50px;
+    background-color: white;
+    z-index: 5; }
+  .header .circle {
+    margin-top: -45px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: black;
+    width: 75px;
+    height: 75px;
+    float: right;
+    margin-right: 10%; }
+    .header .circle:hover .start {
+      color: #d1d1d1; }
+
+.start {
+  margin-top: 29px;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px; }
+
+.headerRubrik {
+  position: absolute;
+  color: #ffffff;
+  font-family: 'Dawning of a New Day', cursive;
+  font-weight: 100;
+  font-size: 50px;
+  margin-top: -59px;
+  margin-left: 30px;
+  box-shadow: -2px 2px 10px black;
+  -moz-box-shadow: -2px 2px 40px black;
+  -webkit-box-shadow: 0 0 20px black;
+  -o-box-shadow: -2px 2px 40px black;
+  padding: 5px;
+  background-color: black;
+  z-index: 3; }
+
 .menu {
   position: absolute;
-  top: 480px;
+  top: 60px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0; }
   .menu img {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 20px; }
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: #000;
+    box-shadow: -2px 2px 40px black;
+    -moz-box-shadow: -2px 2px 40px black;
+    -webkit-box-shadow: -2px 2px 40px black;
+    -o-box-shadow: -2px 2px 40px black;
+    border-radius: 100px; }
 
 .menuItem {
   display: inline-block;
@@ -60,21 +102,17 @@ html body {
   font-size: 16px;
   font-weight: 100;
   color: #808080;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 20px; }
 
 a {
   text-decoration: none; }
 
-.active {
-  font-weight: 300; }
+.activePage {
+  display: none; }
 
-.start {
-  position: absolute;
-  right: 40px;
-  top: 30px;
-  color: #808080;
-  font-weight: bold;
-  text-transform: uppercase; }
+.thisLink {
+  color: #FFFFFF; }
 
 .rubrik {
   background-color: rgba(0, 0, 0, 0.5);
@@ -101,7 +139,6 @@ a {
 
 .slideContent1 {
   position: fixed;
-  top: 0;
   z-index: -1;
   width: 100%;
   height: 532px;
@@ -115,7 +152,7 @@ a {
 
 .citat {
   position: fixed;
-  top: 100px;
+  top: 300px;
   width: 600px;
   margin: auto;
   left: 0;
@@ -126,7 +163,7 @@ a {
   text-shadow: 2px 2px 2px #969696; }
 
 .kontaktContainer, .infoContainer {
-  margin-top: 30px;
+  margin-top: 90px;
   display: flex;
   width: 100%;
   height: 250px;
@@ -139,8 +176,8 @@ a {
   display: block;
   margin: auto;
   width: 450px;
-  height: 235px;
-  padding: 10px;
+  height: 280px;
+  padding: 2%;
   padding-left: 50px;
   padding-right: 150px;
   font-size: 14px;
@@ -151,9 +188,16 @@ a {
 	background: linear-gradient(to bottom right, black , #242424);*/ }
   .infotext p {
     font-size: 24px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-weight: 100; }
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: -50px;
+    font-weight: 300;
+    background: rgba(102, 65, 95, 0.2);
+    color: #808080;
+    padding-left: 10px;
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
   .infotext img {
     width: 400px;
     height: 200px;
@@ -202,17 +246,29 @@ form #send {
   padding: 3px 7px 3px 7px;
   opacity: 0.5; }
 
+.galleryContainer {
+  margin-top: 90px;
+  padding-bottom: 30px;
+  background-color: rgba(0, 0, 0, 0.95);
+  box-shadow: inset 10px 10px 10px -50px #D4D4CC, inset 10px 10px 10px -50px #D4D4CC; }
+
 .gallery {
   display: flex;
   display: inline-block;
   flex-wrap: wrap;
+  /*background-color: rgba(0,0,0, .9);*/
+  border: 20px solid transparent;
+  background-clip: padding-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   overflow-x: scroll;
   overflow-y: hidden;
   height: 220px;
   white-space: nowrap;
-  width: 85%;
+  width: 80%;
   box-shadow: inset 10px 10px 10px -50px #D4D4CC, inset 10px 10px 10px -50px #D4D4CC; }
   .gallery .image {
     display: inline-block;
@@ -223,26 +279,31 @@ form #send {
     margin: auto;
     position: relative;
     white-space: nowrap; }
+    .gallery .image img {
+      border: 3px solid rgba(102, 65, 95, 0.1); }
     .gallery .image .desc {
       color: #414141; }
 
 #arrowLeft {
+  background-image: url("images/arrowLeft.png");
   position: relative;
+  height: 220px;
   top: -85px;
   height: 50px;
   margin: 20px;
-  opacity: 0.2; }
+  opacity: 0.3; }
   #arrowLeft:hover {
-    opacity: 0.5; }
+    opacity: 0.6; }
 
 #arrowRight {
   position: relative;
+  height: 220px;
   top: -85px;
   height: 50px;
   margin: 20px;
-  opacity: 0.2; }
+  opacity: 0.3; }
   #arrowRight:hover {
-    opacity: 0.5; }
+    opacity: 0.6; }
 
 .thumbnail {
   opacity: 1.0;
@@ -367,11 +428,14 @@ footer {
       margin-top: 50px;
       height: auto; } }
 
-.goToStart {
-  color: #ffffff;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 14px; }
+.webHeader {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin-top: -95px;
+  font-size: 70px;
+  color: white;
+  padding-bottom: 5px; }
 
 .webshop {
   display: block;
@@ -458,10 +522,10 @@ footer {
   background-color: #ffffff;
   vertical-align: top;
   display: inline-block;
-  height: 300px;
+  height: 330px;
   padding: 20px;
   margin: 20px;
-  border: 1px solid #e5e5e5;
+  border: 2px solid rgba(73, 40, 67, 0.4);
   color: #000000;
   text-align: center; }
   .itemWrapper h3 {

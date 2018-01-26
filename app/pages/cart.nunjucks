@@ -13,12 +13,14 @@
        
     </head>
     <body>
-        
-     <div class="webHeader"><h1>Varukorg</h1></div>
-        <a class="goToStart" href="index.html">[Gå till start]</a><a class="continueShopping" href="webshop.html">Fortsätt shoppa ></a><br />
+        <div class="header">
+    <div class="headerRubrik">Janie Mobacker</div>
+    <hr /><a href="index.html" class="circle"><div class="start">START</div></a></div>
+    <a class="continueShopping" href="webshop.html">Fortsätt shoppa</a>
+     <div class="webHeader">&#8226; VARUKORG &#8226;</div>
         <div class="itemWrapper">
         <div class="cart">
-            <h3>Varukorg</h3>
+            <h3>PRODUKTER</h3>
             <ul id="showCart"></ul>
             
             <p class="totalPay">Att Betala: <span id="totalCart"></span> SEK</p>
@@ -74,9 +76,9 @@
                 
                 for (var i in cartArray){
                     output += "<li>"
-                        +"<img class='cartImg' src='"+cartArray[i].itemImage+"'/> <strong> "
+                        +"<img class='cartImg' src='"+cartArray[i].itemImage+"'/> <span class='productTitle'> "
                         +cartArray[i].name
-                        +"</strong><br />" 
+                        +"</span><br />" 
                         +"<span>"+cartArray[i].total
                         +" SEK</span> <p class='changeCount'><button class='minusItem' data-name='"
                         +cartArray[i].name+"'>-</button> "
@@ -85,7 +87,7 @@
                         +" <button class='deleteItem' data-name='"
                         +cartArray[i].name+"'>Ta Bort</button>"
                         +"</li>"
-                        +"<hr>";
+                        +"<hr class='productList'>";
                 }
                 $("#showCart").html(output);
                 $("#itemsInCart").html(shoppingCart.countCart()); $("#totalCart").html(shoppingCart.totalCost());

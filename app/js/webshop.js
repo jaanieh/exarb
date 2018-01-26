@@ -9,7 +9,7 @@
     this.count = count
     this.itemImage = itemImage
 };
-   shoppingCart.addItemToCart = function(name, price, count, itemImage){
+   shoppingCart.addItemToCart = function(name, price, count, itemImage){ // funktion för att lägga till produkter i varukorgen 
      for (var i in this.cart) {
          if(this.cart[i].name === name){
              this.cart[i].count += count;
@@ -24,7 +24,7 @@
  };
  
  
- shoppingCart.removeOneItemFromCart = function(name){
+ shoppingCart.removeOneItemFromCart = function(name){ // funktion för att ta bort en produktfrån varukorgen
      for (var i in this.cart) {
          if(this.cart[i].name === name) {
              this.cart[i].count --;
@@ -37,7 +37,7 @@
      shoppingCart.saveCart();
  };
              
- shoppingCart.removeItemFromCart = function (name){
+ shoppingCart.removeItemFromCart = function (name){ // funktion för att ta bort produkter ur varukorgen
      for (var i in this.cart) {
          if (this.cart[i].name === name) {
              this.cart.splice(i, 1)
@@ -50,13 +50,13 @@
  
 
  
- shoppingCart.clearCart = function(){ // removes everything
+ shoppingCart.clearCart = function(){ // rensar varukorgen
      this.cart = [];
      this.saveCart();
  };
  
  
- shoppingCart.countCart = function() { // -> return totalCount
+ shoppingCart.countCart = function() { // returnerar antalet produkter i varukorgen
      var totalCount = 0;
      for (var i in this.cart){
          totalCount += this.cart[i].count;
@@ -65,7 +65,7 @@
  };
 
  
- shoppingCart.totalCost = function(){ //-> returns totalCost
+ shoppingCart.totalCost = function(){ // returnerar totalkostnad
      var totalCost = 0;
      for (var i in this.cart){
          totalCost += this.cart[i].price*this.cart[i].count;
@@ -74,7 +74,7 @@
  };
  
 
- shoppingCart.listCart = function() { //-> display array of item
+ shoppingCart.listCart = function() { // Visar en kopia av lista med produkter
      var cartCopy = [];
      for (var i in this.cart){
          var item = this.cart[i];
@@ -89,11 +89,11 @@
  };
 
  
-  shoppingCart.saveCart = function(){
+  shoppingCart.saveCart = function(){ // sparar varukorgen i localstorage
      localStorage.setItem("shoppingCart", JSON.stringify(this.cart));
  };
  
- shoppingCart.loadCart = function(){
+ shoppingCart.loadCart = function(){ // laddar varukorgen från localstorage
      this.cart = JSON.parse(localStorage.getItem("shoppingCart"));
      if (this.cart === null) {
   this.cart = [];

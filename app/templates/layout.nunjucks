@@ -11,6 +11,9 @@
         <script src="js/webshop.js"></script>
     </head>
     <body>
+    <div class="header">
+    <div class="headerRubrik">Janie Mobacker</div>
+    <hr /><a href="index.html" class="circle"><div class="start">START</div></a></div>
         {% block content %} 
         {% endblock %}
     </body>
