@@ -245,9 +245,44 @@ form {
   font-weight: bold;
   text-transform: uppercase; }
 
-/**
- * Call the damn thing
- */
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-family: tahoma;
+  background-color: black;
+  color: white;
+  font-size: 12px; }
+
+@media (max-width: 768px) {
+  .webHeader {
+    margin-top: -80px;
+    font-size: 60px; }
+  .continueShopping {
+    z-index: 50; }
+  .header {
+    width: 100%;
+    z-index: 1;
+    height: 100px; }
+    .header hr {
+      border: none;
+      height: 1px;
+      margin-top: 50px;
+      background-color: white;
+      z-index: 5; }
+    .header .circle {
+      border: none;
+      margin-top: -60px;
+      margin-right: 2px;
+      background-color: transparent; }
+      .header .circle .start {
+        margin-top: 5px;
+        color: #FFFFFF;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 12px; } }
+
 ::-webkit-scrollbar {
   width: 2px;
   height: 2px; }

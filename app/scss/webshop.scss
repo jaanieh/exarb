@@ -292,6 +292,57 @@ form {
 	text-transform: uppercase;
 }
 
+footer {
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+    font-family: tahoma;
+	background-color: $background_color_5;
+	color: $color_3;
+	font-size: 12px;
+}
+
+@media (max-width:768px) {
+
+    .webHeader {
+        margin-top: -80px;
+        font-size: 60px;
+    }
+    
+    .continueShopping {
+        z-index: 50;
+    }
+    
+    
+    .header {
+    width: 100%;
+    z-index: 1;
+    height: 100px;
+    
+    hr {
+        border: none;
+        height: 1px;
+        margin-top: 50px;
+        background-color: white;
+        z-index: 5;
+    }
+    
+    .circle {
+        border: none;
+        margin-top: -60px;
+        margin-right: 2px;
+        background-color: transparent;
+        .start {
+            margin-top: 5px;
+            color: #FFFFFF;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        }
+}
+}
 
 @mixin scrollbar($size, $primary, $secondary: darken($primary, 15%)) {
 	::-webkit-scrollbar {
@@ -314,7 +365,4 @@ form {
   }
 }
 
-/**
- * Call the damn thing
- */
 @include scrollbar($size, $primary);

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ja9 Webbshop</title>
+        <link rel="stylesheet" type="text/css" href="css/webshop.css"/>
+        
+        <!-- Bootstrap -->
+         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/webshop.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+       
+    </head>
+    <body>
+        <div class="header">
+    <div class="headerRubrik">Janie Mobacker</div>
+    <hr /><a href="index.html" class="circle"><div class="start">START</div></a></div>
+    <a class="continueShopping" href="webshop.html">Fortsätt shoppa</a>
+     <div class="webHeader">&#8226; VARUKORG &#8226;</div>
+        <div class="itemWrapper">
+        <div class="cart">
+            <h3>PRODUKTER</h3>
+            <ul id="showCart"></ul>
+            
+            <p class="totalPay">Att Betala: <span id="totalCart"></span> SEK</p>
+            <p>Betalning sker via faktura<br/>Senast 14 dagar efter mottagen order</p>
+            <div class="checkout"><label>Jag godkänner köpvilkoren <input type="checkbox" name="checkbox" value="value" id="checkBox"></label></div>
+        </div>
+            
+            <form>
+                <input type="text" name="name" placeholder="Namn" id="formName"><br />
+                <input type="text" name="email" placeholder="E-mail" id="formEmail"><br />
+                <input type="text" name="adress" placeholder="Adress" id="formAdress"><br />
+                <input type="text" name="zipcode" placeholder="Postnr" id="formZip">
+                <input type="text" name="ort" placeholder="Ort" id="formOrt"><br />
+                <input type="submit" name="submit" value="Bekräfta" id="formButton">
+            </form>
+    </div>
+       
+     <footer>COPYRIGHTS © JANIE MOBACKER 2017</footer>
+        <script>
+            
+            
+            $(".cart-icon").click(function(event){
+                if($(".cart").css("display") == "none"){
+                        $(".cart").css("display", "block");
+                        $('.cart-icon').css("background", "url(images/graphic/exitShoppingCart.png)"); 
+                    }else if ($(".cart").css("display") == "block"){
+                        $(".cart").css("display", "none");
+                        $('.cart-icon').css("background", "url(images/graphic/shoppingCart.png)"); 
+                    }
+            })
+            
+            
+            $(".addToCart").click(function(event){
+                event.preventDefault(); // för att lämken inte ska göra det den brukar göra (i detta fall gå till #, toppen på sidan. )
+                var name = $(this).attr("data-name"); 
+                var price = Number($(this).attr("data-price"));
+                var itemImage = $(this).attr("data-image");
+                
+                shoppingCart.addItemToCart(name, price, 1, itemImage);
+                shoppingCart.saveCart();
+                displayCart();
+            }); 
+            
+            $("#clearCart").click(function(event){
+                shoppingCart.clearCart();
+                displayCart();
+            });
+            
+
+            function displayCart(){
+                var cartArray = shoppingCart.listCart();
+                var output = "";
+                
+                for (var i in cartArray){
+                    output += "<li>"
+                        +"<img class='cartImg' src='"+cartArray[i].itemImage+"'/> <span class='productTitle'> "
+                        +cartArray[i].name
+                        +"</span><br />" 
+                        +"<span>"+cartArray[i].total
+                        +" SEK</span> <p class='changeCount'><button class='minusItem' data-name='"
+                        +cartArray[i].name+"'>-</button> "
+                        +cartArray[i].count+"<button class='plusItem' data-name='"
+                        +cartArray[i].name+"'>+</button></p>"
+                        +" <button class='deleteItem' data-name='"
+                        +cartArray[i].name+"'>Ta Bort</button>"
+                        +"</li>"
+                        +"<hr class='productList'>";
+                }
+                $("#showCart").html(output);
+                $("#itemsInCart").html(shoppingCart.countCart()); $("#totalCart").html(shoppingCart.totalCost());
+                shoppingCart.saveCart();
+            }
+            
+                $("#showCart").on("click", ".deleteItem", (function(event){
+                    var name = $(this).attr("data-name");
+                    shoppingCart.removeItemFromCart(name);
+                    displayCart();
+            }));
+            
+            $("#showCart").on("click", ".minusItem", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.removeOneItemFromCart(name);
+                displayCart();
+                
+            });
+            
+            $("#showCart").on("click", ".plusItem", function(event){
+                var name = $(this).attr("data-name");
+                shoppingCart.addItemToCart(name, 0, 1);
+                displayCart();
+            })
+            
+            $("#showCart").on("change", ".itemCount", function(){
+                var name = $(this).attr("data-name");
+                var count = $(this).val() // get value from inputfield.
+                shoppingCart.setCountForItem(name, count);
+            })
+            
+       displayCart();
+            
+           
+        </script>
+    </body>
+</html>

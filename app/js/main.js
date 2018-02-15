@@ -3,7 +3,6 @@
 window.addEventListener("load", function()
 {
 var activePage = document.getElementsByClassName("activePage")[0].innerHTML;
-var galleri = "galleri";
 console.log(activePage);
     
 // Lägger till klassen thisLink till menylänken vi befinner oss på
@@ -33,8 +32,10 @@ if (activePage == "galleri") {
 */ 
  
             $(function(){
-                $('.slideContent img:gt(0)').hide(); // gömmer alla bilder förutom den första
-                setInterval(function(){
+                $('.slideContent img:gt(0)').hide();     // gömmer alla bilder förutom den första
+
+                setInterval (function(){
+                    console.log('Slideshow start');
                   $('.slideContent :first-child').fadeOut(1000) 
                      .next('img').fadeIn(1000) 
                      .end().appendTo('.slideContent');}, 

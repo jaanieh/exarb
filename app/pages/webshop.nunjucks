@@ -44,8 +44,8 @@
                 <p class="price">199;-</p>
                  <a class="addToCart" href="#" data-name="Sky" data-price="199" data-image="images/sky.jpg"><button class="addToBasket">Lägg i varukorgen</button></a>
             </div>
-        </div>
-         <div class="productWrapper">
+        <!--</div>
+         <div class="productWrapper">-->
             <div class="itemWrapper">
                 <h3>Boat</h3>
             <img class="itemImg" src="images/boat.jpg"/>
@@ -70,8 +70,8 @@
                 <p class="price">199;-</p>
                  <a class="addToCart" href="#" data-name="Frost" data-price="199" data-image="images/frost.jpg"><button class="addToBasket">Lägg i varukorgen</button></a>
             </div>
-        </div>
-         <div class="productWrapper">
+         <!--</div>
+         <div class="productWrapper">-->
             <div class="itemWrapper">
                 <h3>Rail</h3>
             <img class="itemImg" src="images/rail.jpg"/>
@@ -105,8 +105,6 @@
             <p class="text">Totalt: <span id="totalCart"></span> SEK</p>
             <a href="cart.html"><button class="checkout">Till Kassan</button></a>
         </div>
-<p class="activeLink">webshop</p>
-     <footer>COPYRIGHTS © JANIE MOBACKER 2017</footer>
         <script>
             
             // Visar varukorgen vid klick på ikonen och döljer den om den redan visas

@@ -12,11 +12,11 @@
                 <p>Kontaktformulär</p>
                 <form id="form" name="form" method="post" action="javascript:void(0);"> 
                 <label for="name">Ditt namn:</label>
-                <input type="text" name="name" id="name" placeholder="...janie"/> <br />
+                <input type="text" name="name" id="name" placeholder="..."/> <br />
                 <label for="email">Din mailadress:</label>
                 <input type="email" name="email" id="email" placeholder="du@mail.se"/> <br />
                 <label for="meddelande">Meddelande:</label>
-                <textarea name="meddelande" id="meddelande" placeholder="Vad vill du ha hjälp med?" cols="45" rows="3"></textarea>
+                <textarea name="meddelande" id="meddelande" placeholder="..." cols="45" rows="3"></textarea>
                 <button id="send" onClick="sendForm()">Skicka</button>
                 <div id="messages"></div>
                 </form>
